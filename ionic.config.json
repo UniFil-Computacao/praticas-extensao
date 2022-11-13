@@ -1,0 +1,7 @@
+{
+  "name": "fast-and-flash",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
