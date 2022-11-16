@@ -1,0 +1,21 @@
+.login-img{
+    width: 100%;
+    height: 20rem;
+}
+.login-input{
+    margin-bottom: 5px;
+    --background: black;
+    --color: #fff;
+    --placeholder-color: #ddd;
+    --placeholder-opacity: .8;      
+    --padding-bottom: 10px;
+    --padding-end: 10px;
+    --padding-start: 10px;
+    --padding-top: 10px;
+    border-radius: 10px;
+}
+.submit-button{
+    border: solid 1px #fff;
+    color: #fff;
+    text-align: center;
+}

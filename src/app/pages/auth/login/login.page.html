@@ -1,0 +1,25 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar color="dark">
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-label>
+    {{ userResponse }}
+  </ion-label>
+  <ion-card style="margin-top: 5%;">
+    <img class="login-img" alt="" src="assets/imgs/login-img.jpg" />
+    <ion-card-header>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <form #f="ngForm" (ngSubmit)="startAuth(f)">
+        <ion-input type="email" class="login-input" color="primary" ngModel name="email" placeholder="Email"></ion-input>
+        <ion-input type="password" class="login-input" color="primary" ngModel name="password" placeholder="Senha"></ion-input>
+        <ion-button slot="start" color="dark" shape="round" fill="outline" (click)="newUser()">Registrar</ion-button>
+        <ion-button style="margin-left: 3%;" type="" color="dark" shape="round" fill="outline">Login</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

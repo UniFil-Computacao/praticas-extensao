@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-button color="medium" (click)="cancel()">Cancelar</ion-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #f="ngForm" (ngSubmit)="formSubmit(f)">
+    <ion-item>
+      <ion-label position="stacked">nome</ion-label>
+      <ion-input type="text" ngModel name="name" placeholder="seu nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">email</ion-label>
+      <ion-input type="email" ngModel name="email"  placeholder="seu email"></ion-input>
+    </ion-item>  
+    <ion-item>
+      <ion-label position="stacked">senha</ion-label>
+      <ion-input type="password" ngModel name="password"  placeholder="sua senha"></ion-input>
+    </ion-item>
+    <ion-button fill="clear" expand="block" type="submit">Registrar</ion-button>
+  </form>
+</ion-content>

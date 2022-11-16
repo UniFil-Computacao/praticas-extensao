@@ -1,0 +1,44 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar color="dark">
+    <ion-title>Fast and Flash</ion-title>
+    <ion-button routerLink='/login' style="color:white" slot="end" fill="clear">LogOut</ion-button>
+  </ion-toolbar>  
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Ofertas Disponíveis</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item lines="none" *ngFor="let c of offers">
+            <ion-grid style="text-align: center;">
+              <ion-row>
+                <ion-col>
+                  <!-- <ion-thumbnail slot="start"> -->
+                  <img class="img-offer" alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg">
+                  <!-- </ion-thumbnail> -->
+                  <ion-label class="row-desc">{{c.name}}</ion-label>
+                  <ion-label class="row-desc">{{c.descri}}</ion-label>
+                  <ion-label class="row-desc">{{c.date}}</ion-label>
+                  <ion-label class="row-desc">{{c.value}},00 R$</ion-label>
+                  <ion-icon name="trash" (click)="presentAlert(c.id)">
+                    <p>{{ handlerMessage }}</p>
+                    <p>{{ roleMessage }}</p>
+                  </ion-icon>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="newOffer()" color="primary">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
